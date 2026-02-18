@@ -1,1 +1,1 @@
-# mastering_taproot_book_learning
+poetry run python src/private_keys.py
