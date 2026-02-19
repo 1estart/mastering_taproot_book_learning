@@ -16,3 +16,20 @@ public_key_uncompressed = key.public_uncompressed_hex # 65 bytes
 print(f"Compressed: {public_key_compressed}")
 print(f"Uncompressed: {public_key_uncompressed[:70]}...")
  # Truncated for display
+
+# Taproot uses x-only public keys (32 bytes)
+taproot_pubkey = key.public_hex[2:] # Remove the 02/03 prefix
+print(f"X-only Public Key: {taproot_pubkey}")
+
+# Generate different address types from the same key
+legacy_address = key.address()# P2PKH
+segwit_native = key.address(encoding='bech32') # P2WPKH
+segwit_p2sh = key.address(encoding='base58', script_type='p2sh') # P2SH-P2WPKH
+taproot_address = key.address(script_type='p2tr') # P2TR
+
+
+
+print(f"Legacy (P2PKH): {legacy_address}")
+print(f"SegWit Native: {segwit_native}")
+print(f"SegWit P2SH: {segwit_p2sh}")
+print(f"Taproot: {taproot_address}")

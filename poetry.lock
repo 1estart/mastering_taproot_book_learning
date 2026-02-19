@@ -185,7 +185,6 @@ description = "Fast elliptic curve digital signatures"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
-markers = "platform_system != \"Windows\""
 files = [
     {file = "fastecdsa-3.0.1-cp310-cp310-macosx_13_0_x86_64.whl", hash = "sha256:5793ac17891bc8c7002c8364b5df32ac17b486a68c6e32d941f3f0b3641b417b"},
     {file = "fastecdsa-3.0.1-cp310-cp310-macosx_14_0_arm64.whl", hash = "sha256:e99b2695f3cbf363fa4fc12e036b5a2b50a01004b82972dce102bb73fa1833bd"},
@@ -592,4 +591,4 @@ zstd = ["backports-zstd (>=1.0.0) ; python_version < \"3.14\""]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.13"
-content-hash = "7e512ad7255623b8ea138187d6fa7b66d75587a9a410ae1191a421f9419c5d18"
+content-hash = "19610b06a006a7965f9b24dc1fef67441a3462074af522691e5fc6f08d7f98ff"
