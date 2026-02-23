@@ -1,18 +1,16 @@
-[project]
+[tool.poetry]
 name = "mastering-taproot"
 version = "0.1.0"
 description = ""
+authors = ["Artemiy <artem.pospelov2018@yandex.ru>"]
 package-mode = false
-authors = [
-    {name = "Artemiy",email = "artem.pospelov2018@yandex.ru"}
-]
-requires-python = ">=3.13"
-dependencies = [
-    "bitcoinlib (>=0.7.7,<0.8.0)",
-    "fastecdsa (>=3.0.1,<4.0.0)"
-]
 
+# 🔥 Ключевое: указываем Python здесь, а не в [project]
+[tool.poetry.dependencies]
+python = ">=3.12"
+bitcoinlib = ">=0.7.7,<0.8.0"
+fastecdsa = ">=3.0.1,<4.0.0"
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
